@@ -33,7 +33,13 @@ gulp.task('clone',['read'], function(done){
     }
 
     for (var i = 0; i < addons.length; i++) {
-      git.clone(addons[i].url, {cwd: settings.local_addons_directory}, function(err){
+      var url;
+      if(addons[i].url){
+        url = addons[i].url;
+      }else if (addons[i].github) {
+        url = "https://github.com/"+addons[i].github+".git";
+      }
+      git.clone(url, {cwd: settings.local_addons_directory}, function(err){
         if (err) throw err;
         // cloneCounter++;
       });

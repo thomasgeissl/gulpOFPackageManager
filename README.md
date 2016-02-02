@@ -30,7 +30,9 @@ The script parses a package.json file.
 		"checkout": "develop"
 	}, {
 		"url": "https://github.com/danomatika/ofxMidi.git",
-    "checkout": "4e92269cf419d7cade46911fc0e768acd54e1969"
+		"checkout": "4e92269cf419d7cade46911fc0e768acd54e1969"
+	}, {
+		"github": "bakercp/ofxIO"
 	}],
   "libs": [
     {
