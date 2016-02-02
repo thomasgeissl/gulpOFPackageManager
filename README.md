@@ -22,6 +22,7 @@ Project management
 
 Example
 ---
+The script parses a package.json file.
 ```js
 {
 	"addons": [{
@@ -49,7 +50,9 @@ TODO:
 * Install addon dependencies, need to parse addon_config.mk or add a json based addon config
 * npm-like functionalities: install, installSave, uninstall, uninstallSave, ...
 * Update/generate addons.make with local paths
-* command line args for packagefile
+* Delete local_addons and libs if already exist
+* command line args for e.g. package file
+* Use gulp-promt for interactive mode
 
 License
 ---
