@@ -8,7 +8,7 @@ This is a work in progress and might undergo some changes.
 
 I also plan to port this to oF.
 
-Basic usage
+Usage
 ---
 Installation
 ####
@@ -19,10 +19,11 @@ Project management
 ####
 * Clone dependencies: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager clone```
 * Checkout versions: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager checkout```
+* Search repo: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager search --query ofxHttp```
 
 Example
 ---
-The script parses a package.json file.
+The script parses an ofPackage.json file.
 ```js
 {
 	"addons": [{

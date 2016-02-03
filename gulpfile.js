@@ -2,13 +2,19 @@
 
 var fs = require('fs');
 var gulp = require('gulp');
+var util = require('gulp-util');
 var git = require('gulp-git');
+var github = require('octonode');
+var client = github.client();
+var ghsearch = client.search();
+
 
 
 var settings = {
-  "config_path": process.env.INIT_CWD+"/package.json",
+  "config_path": process.env.INIT_CWD+"/ofPackage.json",
   "local_addons_directory": process.env.INIT_CWD+"/local_addons",
-  "libs_directory": process.env.INIT_CWD+"/libs"
+  "libs_directory": process.env.INIT_CWD+"/libs",
+  "github_search_url": "https://api.github.com/search/repositories?q="
 }
 var dependencies = {};
 var cloneCounter = 0;
@@ -84,5 +90,22 @@ gulp.task('checkout',['read'], function(done){//repleace read by clone
     }
   }
   // TODO: make sure addons are checked out
+  return done();
+});
+
+gulp.task('search', function(done){
+  if(util.env.query){
+    ghsearch.repos({
+      q: util.env.query,
+      sort: 'created',
+      order: 'asc'
+    },
+    function(err, data, headers) {
+      for(var i = 0; i < data.items.length; i++){
+        console.log(data.items[i].full_name);
+      }
+    }
+  );
+  }
   return done();
 });

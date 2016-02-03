@@ -10,6 +10,8 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-git": "^1.6.0"
+    "gulp-git": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "octonode": "^0.7.4"
   }
 }
