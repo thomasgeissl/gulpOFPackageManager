@@ -21,6 +21,7 @@ Project management
 * Checkout versions: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager checkout```
 * Search repo: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager search --query ofxHttp```
 * Install repo: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager install --github bakercp/ofxHttp [--type lib]```
+* Save ofPackage file: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager save```
 
 Example
 ---
