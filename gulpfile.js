@@ -109,3 +109,22 @@ gulp.task('search', function(done){
   }
   return done();
 });
+
+gulp.task('install', function(done){
+  if (util.env.github) {
+    var directory;
+    if(util.env.type === 'lib'){
+      directory = settings.libs_directory;
+    }else{
+      directory = settings.local_addons_directory;
+    }
+    if (!fs.existsSync(directory)){
+      fs.mkdirSync(directory);
+    }
+    url = "https://github.com/"+util.env.github+".git";
+    git.clone(url, {cwd: directory}, function(err){
+      if (err) throw err;
+      return done();
+    });
+  }
+});

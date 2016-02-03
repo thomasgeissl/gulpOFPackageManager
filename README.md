@@ -20,6 +20,7 @@ Project management
 * Clone dependencies: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager clone```
 * Checkout versions: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager checkout```
 * Search repo: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager search --query ofxHttp```
+* Install repo: ```gulp --cwd /path/to/your/openFrameworks/scripts/gulpOFPackageManager install --github bakercp/ofxHttp [--type lib]```
 
 Example
 ---
